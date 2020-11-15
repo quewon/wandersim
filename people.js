@@ -1,10 +1,21 @@
+const f_names = 'txts/f_names.txt';
+const m_names = 'txts/m_names.txt';
+
 var PEOPLE = {};
 
 PEOPLE.list = {};
 
-PEOPLE.names_female = ["Serena", "Keva", "Keerthana", "Sofie", "Sophia", "Anna", "Lina", "Amy", "Rosie", "Tushti", "Dhevina", "Phoebe", "Daphne", "Lexi", "Uju", "Atiya", "Eunhyo", "Seojin", "Zenna", "Soyeon", "Geunhee", "Chaeyoung", "Patricia", "Marion", "Erin"];
+PEOPLE.names_female;
+fetch(f_names)
+	.then( r => r.text() )
+	.then( t => PEOPLE.names_female = t );
+console.log(f_names);
 
-PEOPLE.names_male = ["Derek", "Andy", "Quedahm", "Junsoo", "Nick", "Ethan", "Tsukase", "Irfan", "Ilham", "Jon", "Donghwa"];
+PEOPLE.names_male;
+fetch(m_names)
+	.then( r => r.text() )
+	.then( t => PEOPLE.names_male = t );
+console.log(m_names);
 
 PEOPLE.names_used = [];
 
