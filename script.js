@@ -56,6 +56,16 @@ window.onkeydown = function(e) {
 
 var data = {};
 
-var story = fetch('story.txt').then(x => x.text())[[PromiseResult]];
+Promise.all([
+  fetch('story.txt').then(x => x.text())
+]).then(([sampleResp]) => {
+  console.log(sampleResp);
+});
 
 console.log(story);
+
+const story = 'story.txt';
+
+fetch(story)
+	.then( r => r.text() )
+	.then( t => console.log(t) );
