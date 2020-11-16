@@ -1,80 +1,18 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-<head>
-	<title>wandersim</title>
-	<style>
-		body {
-			--bg: #fff;
-			--color: #000;
-			--dialog: #3a3277;
-			--a: #6772a9;
-			--width: 500px;
-			color: var(--color);
-			font-family: Courier, monospace;
-		}
-		::selection {
-			background: var(--dialog);
-			color: var(--bg);
-		}
-		#container {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			width: var(--width);
-			height: var(--width);
-			padding: 1em;
-			background-color: var(--bg);
-		}
-		d {
-			color: var(--dialog);
-			font-weight: bold;
-		}
-		a {
-			color: var(--a);
-		}
-		a:hover {
-			cursor: pointer;
-			background-color: var(--a);
-			color: var(--bg);
-		}
-		input {
-			width: 100%;
-			background-color: inherit;
-			border: 1px solid var(--color);
-			font-family: inherit;
-			font-size: inherit;
-			color: inherit;
-		}
-		button {
-			width: 100%;
-			background-color: inherit;
-			border: 1px solid var(--color);
-			font-family: inherit;
-			font-size: inherit;
-			color: inherit;
-		}
-		button:hover {
-			background-color: var(--color);
-			color: var(--bg);
-			cursor: pointer;
-		}
-	</style>
-</head>
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
 
-<body>
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-	<div id="container">
-	</div>
+      <div class="entry">
+        {{ post.excerpt }}
+      </div>
 
-</body>
-
-<script src="script.js"></script>
-<script src="people.js"></script>
-<script src="dialog.js"></script>
-<script>
-	DIALOG.print('intro');
-</script>
-
-</html>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>
