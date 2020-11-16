@@ -1,0 +1,15 @@
+you wander.
+
+[location intro]. you've been wandering for [timer] days. you're running out of food. you're running out of drink.
+
+{you wander}.
+
+
+
+you wander.
+
+[location flavor text]. you can't tell north from south. you've been wandering for 6 days. you're running out of food. you're running out of drink.
+
+
+desert intro: the desert stretches on as far as the eye can see.
+desert flavor text: your footsteps wash away in the sandy breeze.

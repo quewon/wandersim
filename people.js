@@ -8,16 +8,12 @@ PEOPLE.list = {};
 PEOPLE.names_female;
 fetch(f_names)
 	.then( r => r.text() )
-	.then( t => PEOPLE.names_female = t );
-console.log(f_names);
+	.then( t => PEOPLE.names_female = t.split("\n") );
 
 PEOPLE.names_male;
 fetch(m_names)
 	.then( r => r.text() )
-	.then( t => PEOPLE.names_male = t );
-console.log(m_names);
-
-PEOPLE.names_used = [];
+	.then( t => PEOPLE.names_male = t.split("\n") );
 
 PEOPLE.generate = function() {
 	let g;
